@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <fstream>
 
@@ -10,6 +11,17 @@ void main()
 	const int MAC_SIZE = 18;
 	char sz_ip_buffer[IP_SIZE] = {};
 	char sz_mac_buffer[MAC_SIZE] = {};
+	
+	char sz_filename[FILENAME_MAX] = {};
+	cout << "ֲגוהטעו טלÿ פאיכא: ";
+	
+	cin.getline(sz_filename, FILENAME_MAX);
+	if (strcmp(sz_filename + strlen(sz_filename) - 4, ".txt"))
+	{
+		strcat(sz_filename, ".txt");
+		cout << sz_filename << endl;
+	}
+
 	std::ofstream fout("201 ready.txt");
 	std::ifstream fin("201 RAW.txt");
 	if (fin.is_open())
