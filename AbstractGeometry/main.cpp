@@ -152,7 +152,7 @@ namespace Geometry
 		{
 
 		}
-		double get_radius() const
+		double get_radius()const
 		{
 			return radius;
 		}
@@ -162,10 +162,10 @@ namespace Geometry
 			if (radius < 5)radius = 5;
 			this->radius = radius;
 		}
-		double get_diametr() 
+		/*double get_diametr()const override
 		{
 			return radius * radius;
-		}
+		}*/
 		void draw()
 		{
 			HWND hwnd = GetConsoleWindow();
@@ -197,6 +197,5 @@ void main()
 	square.info();
 
 	Geometry::Rectangle rect(5, 12);
-	Geometry::Circle A();
-	rect.info();
+	Geometry::Circle A;
 }
