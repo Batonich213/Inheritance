@@ -152,11 +152,11 @@ namespace Geometry
 		{
 
 		}
-		double get_radius()const
+		double get_radius()const override
 		{
 			return radius;
 		}
-		void set_radius(double radius)
+		void set_radius(double radius) override
 		{
 			if(radius > 30)radius = 15;
 			if (radius < 5)radius = 5;
